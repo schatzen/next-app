@@ -8,8 +8,8 @@ export default function ProductsLayout({
   return (
     <>
       <nav className={style.nav}>
-        <a>여성옷</a>
-        <a>남성옷</a>
+        <a href="/products/woman">여성옷</a>
+        <a href="/products/man">남성옷</a>
       </nav>
       <section className={style.section}>{children}</section>
     </>

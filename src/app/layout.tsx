@@ -17,8 +17,9 @@ export default function RootLayout({
         <header className={style.header}>
           <h1>Next App</h1>
           <nav className={style.nav}>
-            <a>About</a>
-            <a>Contact</a>
+            <a href="/products">Products</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
           </nav>
         </header>
         {children}
