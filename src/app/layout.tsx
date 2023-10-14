@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import "./globals.css";
 import style from "./layout.module.css";
+
+export const metadata: Metadata = {
+  title: "멋진 제품 사이트",
+  description: "멋진 제품들을 제공하는 사이트입니다.",
+};
 
 export default function RootLayout({
   children,
