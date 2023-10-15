@@ -1,6 +1,8 @@
 import { getProducts } from "@/service/products";
 import Link from "next/link";
 
+export const revalidate = 3;
+
 /**
  * 서버 컴포넌트는 async 함수로 정의 가능
  */
