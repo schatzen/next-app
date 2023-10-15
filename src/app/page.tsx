@@ -1,6 +1,11 @@
-import os from "os";
+import { CounterButton } from "@/components/CounterButton";
 
 export default function Home() {
-  console.log(os.hostname());
-  return <h1>Main Page</h1>;
+  console.log("hello from Server");
+  return (
+    <>
+      <h1>Main Page</h1>
+      <CounterButton />
+    </>
+  );
 }
