@@ -1,19 +1,13 @@
 import { getProducts } from "@/service/products";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { MeowArticle } from "@/components/MeowArticle/MeowArticle";
 
 /**
  * 서버 컴포넌트는 async 함수로 정의 가능
  */
 export default async function ProductsPage() {
   const products = await getProducts();
-
-  const res = await fetch("https://meowfacts.herokuapp.com", {
-    cache: "no-store",
-  });
-
-  const data = await res.json();
-  const factText = data.data[0];
 
   return (
     <>
@@ -26,7 +20,7 @@ export default async function ProductsPage() {
         ))}
       </ul>
 
-      <article className={styles.article}>{factText}</article>
+      <MeowArticle />
     </>
   );
 }
