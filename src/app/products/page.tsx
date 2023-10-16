@@ -9,10 +9,9 @@ export default async function ProductsPage() {
   const products = await getProducts();
 
   const res = await fetch("https://meowfacts.herokuapp.com", {
-    next: {
-      revalidate: 3,
-    },
+    cache: "no-store",
   });
+
   const data = await res.json();
   const factText = data.data[0];
 
